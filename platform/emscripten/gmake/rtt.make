@@ -34,7 +34,7 @@ ifeq ($(config),Debug)
   LDDEPS    +=
   LIBS      += $(LDDEPS)
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
-  #LINKCMD    = $(CC) $(OBJECTS) -o $(TARGET)
+  LINKCMD    = $(CC) $(OBJECTS) -o $(TARGET)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
@@ -58,7 +58,7 @@ ifeq ($(config),Release)
   LDDEPS    +=
   LIBS      += $(LDDEPS)
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
-  #LINKCMD    = $(CC) $(OBJECTS) -o $(TARGET)
+  LINKCMD    = $(CC) $(OBJECTS) -o $(TARGET)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS
